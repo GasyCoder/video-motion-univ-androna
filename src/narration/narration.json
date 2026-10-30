@@ -1,0 +1,15 @@
+{
+	"language": "fr-FR",
+	"notes": "Source unique de la narration (ton publicitaire, rythme soutenu). « | » sépare les sous-titres, « *…* » marque un mot clé mis en valeur. Les mots énumérés après chaque domaine reprennent les intitulés de ses mentions et parcours (src/data/academicStructure.ts) : aucune information inventée. subtitles=false : la carte et l'arbre à l'écran affichent déjà ces mots (un sous-titre masquerait l'arbre).",
+	"segments": [
+		{"id": "question", "text": "Nouveaux bacheliers ? | Quelle formation choisir ? | Quel parcours pour *votre avenir* ?", "subtitles": true},
+		{"id": "universite", "text": "La réponse : | *l’Université d’Androna !* | Quatre domaines, | dix mentions, | *vingt-six parcours !*", "subtitles": true},
+		{"id": "alsh", "text": "Arts, Lettres et Sciences Humaines : | *histoire, géographie, anthropologie.*", "subtitles": false},
+		{"id": "st", "text": "Sciences et Technologies : | *agronomie, environnement, sciences de la vie.*", "subtitles": false},
+		{"id": "ss", "text": "Sciences de la Société : | *droit privé, droit public, économie.*", "subtitles": false},
+		{"id": "si", "text": "Et Sciences de l’Ingénieur : | *hydraulique, topographie, géologie.*", "subtitles": false},
+		{"id": "parcours", "text": "Des parcours conçus | pour *votre projet d’études* | et *votre avenir professionnel !*", "subtitles": true},
+		{"id": "ensemble", "text": "Étudiants, enseignants | et équipes universitaires : | *ensemble*, on apprend, | on découvre | et on innove !", "subtitles": true},
+		{"id": "avenir", "text": "Alors, explorez nos formations, | *choisissez votre parcours* | et *construisez votre avenir* | avec l’Université d’Androna !", "subtitles": true}
+	]
+}

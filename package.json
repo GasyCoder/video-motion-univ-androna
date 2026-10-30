@@ -1,0 +1,40 @@
+{
+  "name": "androna-motion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vidéo d'orientation de l'Université d'Androna (Remotion, 1080x1920 et master 4K, 30 fps, voix off, musique, sous-titres)",
+  "type": "module",
+  "scripts": {
+    "fonts": "node scripts/copy-fonts.mjs",
+    "postinstall": "node scripts/copy-fonts.mjs",
+    "dev": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "build": "remotion bundle --out-dir=build",
+    "check": "npm run typecheck && npm run build",
+    "voice": ".venv/bin/python scripts/narration/generate.py",
+    "timeline": "node scripts/audio/export-timeline.mjs",
+    "music": "node scripts/audio/export-timeline.mjs && .venv/bin/python scripts/audio/compose.py",
+    "audio": "npm run voice && npm run music",
+    "stills": "node scripts/render-stills.mjs",
+    "render": "remotion render AndronaAcademicMotion out/androna-orientation-1080x1920.mp4 --codec=h264 --crf=16 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=192k",
+    "render:low-mem": "remotion render AndronaAcademicMotion out/androna-orientation-1080x1920.mp4 --codec=h264 --crf=16 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=192k --concurrency=2",
+    "render:4k": "remotion render AndronaAcademicMotion-4K .cache/master-hev1.mp4 --codec=h265 --crf=18 --pixel-format=yuv420p --color-space=bt709 --audio-codec=aac --audio-bitrate=256k --concurrency=2 && node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg -y -loglevel error -i .cache/master-hev1.mp4 -c copy -tag:v hvc1 -movflags +faststart out/androna-orientation-2160x3840.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "@remotion/fonts": "4.0.539",
+    "@remotion/media": "4.0.539",
+    "@remotion/paths": "4.0.539",
+    "lucide-react": "1.65.0",
+    "react": "19.2.9",
+    "react-dom": "19.2.9",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource-variable/montserrat": "5.3.0",
+    "@types/react": "19.2.18",
+    "esbuild": "0.28.1",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,43 @@
+{
+	"targetWordsPerMinute": 175,
+	"mastering": {
+		"loudnessLufs": -15,
+		"ceilingDbtp": -1.5
+	},
+	"pauses": {
+		"sentence": 0.16,
+		"comma": 0.08
+	},
+	"edge": {
+		"voice": "fr-FR-RemyMultilingualNeural",
+		"rate": "+20%",
+		"pitch": "+0Hz",
+		"attempts": 3,
+		"license": "Voix neuronale Microsoft fr-FR-RemyMultilingualNeural obtenue via le service de lecture à voix haute de Microsoft Edge (bibliothèque edge-tts) : version de travail. Pour une diffusion commerciale, régénérer la même voix avec Azure AI Speech (AZURE_SPEECH_KEY, AZURE_SPEECH_REGION)."
+	},
+	"azure": {
+		"voice": "fr-FR-RemyMultilingualNeural",
+		"rate": "+20%",
+		"license": "Microsoft Azure AI Speech, voix neuronale standard fr-FR-RemyMultilingualNeural : usage commercial couvert par l'abonnement Azure utilisé."
+	},
+	"piper": {
+		"model": "fr_FR-mls-medium",
+		"modelPath": "fr/fr_FR/mls/medium/fr_FR-mls-medium",
+		"speaker": "10065",
+		"lengthScale": 0.9,
+		"noiseScale": 0.333,
+		"noiseWScale": 0.333,
+		"license": "Piper (MIT/GPL, outil) — modèle fr_FR-mls-medium entraîné sur Multilingual LibriSpeech (CC BY 4.0) : attribution requise.",
+		"attempts": 8
+	},
+	"elevenlabs": {
+		"modelId": "eleven_multilingual_v2",
+		"voiceSettings": {
+			"stability": 0.45,
+			"similarity_boost": 0.75,
+			"style": 0.35,
+			"use_speaker_boost": true
+		},
+		"license": "ElevenLabs — usage commercial selon l'abonnement du compte utilisé."
+	}
+}

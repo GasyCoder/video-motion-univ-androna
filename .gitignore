@@ -1,0 +1,9 @@
+node_modules/
+build/
+out/
+.DS_Store
+# Polices copiées automatiquement depuis node_modules (npm run fonts)
+public/fonts/*.woff2
+# Environnement Python local (voix, musique) et caches de génération
+.venv/
+.cache/
